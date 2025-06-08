@@ -19,7 +19,7 @@ app.get('/search', async (req, res) => {
   if (!q) return res.status(400).json({ error: 'Enter a query (*_*)' });
 
 try {
-  const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CSE_ID}&q=${encodeURIComponent(q)}`;
+  const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${AIzaSyDXK0pwGH6IWSofHZNBenZezNXSKc52BZE}}&cx=${60434bec15f0b4b80}&q=${encodeURIComponent(q)}`;
   const { data } = await axios.get(apiUrl);
   res.json({ results: data.items || [] });
 
