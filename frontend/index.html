@@ -1,6 +1,66 @@
+<!DOCTYPE html>
+
+//Logo for robust here
 
 
-<form id="search-form">
-  <input type="text" id="search-box" placeholder="Search..." />
-  <button type="submit">Search</button>
-</form>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Search</title>
+</head>
+<body>
+  <h1>Search Google (Custom)</h1>
+  <input type="text" id="searchInput" placeholder="Type your search here" />
+  <button id="searchBtn">Search</button>
+  <div id="results"></div>
+
+  <script>
+    document.getElementById('searchBtn').onclick = async function() {
+      const query = document.getElementById('searchInput').value.trim();
+      if (!query) {
+        alert('Please enter a search term!');
+        return;
+      }
+      document.getElementById('results').innerHTML = 'Searching...';
+      try {
+        // Fetch results from your backend
+        const response = await fetch('http://localhost:3001/search?q=' + encodeURIComponent(query));
+        const data = await response.json();
+        if (data.results && data.results.length) {
+          let html = '';
+          data.results.forEach(item => {
+            html += `<div style="margin-bottom:16px;">
+              <a href="${item.link}" target="_blank"><b>${item.title}</b></a>
+              <p>${item.snippet}</p>
+            </div>`;
+          });
+          document.getElementById('results').innerHTML = html;
+        } else {
+          document.getElementById('results').innerHTML = 'No results found.';
+        }
+      } catch (e) {
+        document.getElementById('results').innerHTML = 'Error: ' + e.message;
+      }
+    };
+  </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Search</title>
+</head>
+<body>
+  <h1>Search</h1>
+  <form method="get" action="http://localhost:3001/search">
+    <input type="text" name="q" placeholder="Enter search term" required>
+    <button type="submit">Search</button>
+  </form>
+</body>
+</html>
