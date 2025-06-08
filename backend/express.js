@@ -1,4 +1,4 @@
-//Backend. Recieves query from frontend and sends it to Google Custom Search AP, 
+//Backend. Recieves query from frontend and sends it to Google Custom Search API, 
 //which is set to only include reliable websites.
 
 //I want to thank https://shamsfiroz.medium.com/building-a-full-stack-javascript-search-engine-with-google-custom-search-api-cad796360d2c 
