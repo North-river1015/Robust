@@ -18,8 +18,8 @@ app.get('/search', async (req, res) => {
   const { q } = req.query;
   if (!q) return res.status(400).json({ error: 'Enter a query (*_*)' });
 
-  try {
-    const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CSE_ID}&q=${encodeURIComponent(q)}`;
+try {
+    const apiUrl = `https://robust-1.onrender.com/search?q=${encodeURIComponent(q)}`;
     const { data } = await axios.get(apiUrl);
     res.json({ results: data.items || [] });
   } catch (e) {
