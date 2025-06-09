@@ -12,8 +12,11 @@ I still have to modify this code, but I shipped it for the t-shirt. I got help f
 
 To do list:
 -polish UI
+
 -create logo
+
 -use nest instead of localhost
+
 -add "about" page?
 
 
