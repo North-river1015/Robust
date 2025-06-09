@@ -14,16 +14,16 @@ I filtered using google's API, only allowing domains .edu, .org and other reliab
 
 I still have to modify this code, but I shipped it for the t-shirt. I got help from copilot for quicker development. 
 
-##To do list:
+## To do list:
 
-+polish UI
++ polish UI
 
-+create logo
++ create logo
 
-+use nest instead of localhost
++ use nest instead of localhost
 
-+add "about" page?
++ add "about" page?
 
-+Add favicon
++ Add favicon
 
 
