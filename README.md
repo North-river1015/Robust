@@ -4,7 +4,7 @@
 
 <img width="1280" alt="スクリーンショット 2025-06-08 20 44 00" src="https://github.com/user-attachments/assets/47fb1ec0-871d-472c-8ab4-fd2782ee35ea" />
 
-## What's behind this project?
+## What's behind this project? 
 A browser that only shows (relatively) reliable sites. 
 
 I realized that many times I'm doing school research, I'm only using limited number of sources---but have other sites come up on google and other browsers. 
